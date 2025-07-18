@@ -10,3 +10,44 @@ p {
     margin: 0;
     padding: 0;
 }
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 7.5fr 1fr;
+}
+
+.header {
+    background-color: #F9F9F9;
+    padding: 30px 400px;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.main {
+    padding: 30px 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #00a8e8;
+    border-radius: 8px;
+    color: #F9F9F9;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
