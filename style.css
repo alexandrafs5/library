@@ -37,6 +37,7 @@ p {
     padding: 30px 400px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 button {
@@ -50,4 +51,35 @@ button {
     border-radius: 24px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: #F9F9F9;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.book-title {
+    font-weight: 700;
+}
+
+.toggle-read, .delete-book {
+    background-color: #e0e0e0;
+    color: black;
+    font-weight: 500;
+    border-radius: 12px;
 }

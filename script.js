@@ -53,7 +53,7 @@ function displayBooks() {
         card.classList.add("book-card");
 
         card.innerHTML = `
-        <h3>${book.title}</h3>
+        <p class="book-title">${book.title}</p>
         <p>Autor: ${book.author}</p>
         <p>Páginas: ${book.pages}</p>
         <p>${book.read ? "Leído" : "No leído"}</p>
