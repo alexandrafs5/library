@@ -1,13 +1,10 @@
 const add = document.querySelector(".add");
 const books = document.querySelector(".books");
-const bookForm = document.querySelector(".book-form");
+const bookForm = document.querySelector(".bookForm");
+const dialog = document.querySelector(".formDialog");
 
 add.addEventListener("click", function(){
-    if (bookForm.style.display === "none" || bookForm.style.display === "") {
-        bookForm.style.display = "block";
-    } else {
-        bookForm.style.display = "none";
-    }
+    dialog.showModal();
 })
 
 bookForm.addEventListener("submit", function(event) {
@@ -22,7 +19,7 @@ bookForm.addEventListener("submit", function(event) {
     addBookToLibrary(title, author, pages, read);
 
     this.reset();
-    bookForm.style.display = "none";
+    dialog.close();
 });
 
 const myLibrary = [];

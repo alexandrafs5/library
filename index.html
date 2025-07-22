@@ -14,17 +14,19 @@
     <div class="container">
         <div class="header">Personal library</div>
         <div class="main">
+            <dialog class="formDialog">
+                <form method="post" class="bookForm">
+                    <input type="text" name="title" placeholder="Título" required>
+                    <input type="text" name="author" placeholder="Autor" required>
+                    <input type="number" name="pages" placeholder="Páginas" required min="1">
+                    <label>
+                        <input type="checkbox" name="read"> Leído
+                    </label>
+                    <button type="submit">Agregar libro</button>
+                </form>
+            </dialog>
             <button class="add">+ Add book</button>
             <div class="books"></div>
-            <form class="book-form" style="display: none;">
-                <input type="text" name="title" placeholder="Título" required>
-                <input type="text" name="author" placeholder="Autor" required>
-                <input type="number" name="pages" placeholder="Páginas" required min="1">
-                <label>
-                    <input type="checkbox" name="read"> Leído
-                </label>
-                <button type="submit">Agregar libro</button>
-            </form>
         </div>
         <div class="footer">Copyright © 2025 alexandrafs5</div>
     </div>
