@@ -1,13 +1,13 @@
 const add = document.querySelector(".add");
 const books = document.querySelector(".books");
-const bookForm = document.querySelector(".bookForm");
-const dialog = document.querySelector(".formDialog");
+const bookForm = document.querySelector(".book-form");
+const dialog = document.querySelector(".form-dialog");
 
-add.addEventListener("click", function(){
+add.addEventListener("click", function () {
     dialog.showModal();
 })
 
-bookForm.addEventListener("submit", function(event) {
+bookForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const title = this.title.value.trim();
@@ -32,7 +32,7 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-Book.prototype.toggleRead = function() {
+Book.prototype.toggleRead = function () {
     this.read = !this.read;
 }
 
@@ -45,17 +45,17 @@ function addBookToLibrary(title, author, pages, read) {
 function displayBooks() {
     books.innerHTML = "";
 
-    myLibrary.forEach(function(book, index) {
+    myLibrary.forEach(function (book, index) {
         const card = document.createElement("div");
         card.classList.add("book-card");
 
         card.innerHTML = `
         <p class="book-title">${book.title}</p>
-        <p>Autor: ${book.author}</p>
-        <p>Páginas: ${book.pages}</p>
-        <p>${book.read ? "Leído" : "No leído"}</p>
-        <button class="toggle-read">Cambiar estado</button>
-        <button class="delete-book">Eliminar</button>
+        <p>Author: ${book.author}</p>
+        <p>Pages: ${book.pages}</p>
+        <p>${book.read ? "Read" : "Not read"}</p>
+        <button class="toggle-read">Change status</button>
+        <button class="delete-book">Delete</button>
         `;
 
         const toggleBtn = card.querySelector(".toggle-read");

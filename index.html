@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="header">Personal library</div>
         <div class="main">
-            <dialog class="formDialog">
-                <form method="post" class="bookForm">
-                    <input type="text" name="title" placeholder="Título" required>
-                    <input type="text" name="author" placeholder="Autor" required>
-                    <input type="number" name="pages" placeholder="Páginas" required min="1">
+            <dialog class="form-dialog">
+                <p class="form-title">Add new book</p>
+                <form method="post" class="book-form">
+                    <input type="text" name="title" placeholder="Title" required>
+                    <input type="text" name="author" placeholder="Author" required>
+                    <input type="number" name="pages" placeholder="Pages" required min="1">
                     <label>
-                        <input type="checkbox" name="read"> Leído
+                        <input type="checkbox" name="read"> Read
                     </label>
-                    <button type="submit">Agregar libro</button>
+                    <button type="submit" class="submit">Submit</button>
                 </form>
             </dialog>
             <button class="add">+ Add book</button>
@@ -32,4 +35,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
